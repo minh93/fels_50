@@ -1,3 +1,4 @@
 user:
   maximum_characters: 50
   minimum_characters: 5
+  gavatar_url: "https://secure.gravatar.com/avatar/"
