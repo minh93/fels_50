@@ -21,3 +21,19 @@
 
 en:
   hello: "Hello world"
+  layouts: 
+    header:
+      website: "Framgia eLearning"
+      home: "Home"
+      help: "Help"
+      log_in: "Log in"
+    footer:
+      website: "Framgia eLearning"
+      home: "Home"
+      help: "Help"
+    application:
+      title: "Fels"
+  static_pages:
+    home:
+      btn_words: "Words"
+      btn_lessons: "Lessons"
