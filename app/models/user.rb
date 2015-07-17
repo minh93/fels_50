@@ -1,4 +1,6 @@
 class User < ActiveRecord::Base
+  before_save ->{self.email = email.downcase}
+
   has_many :activities, dependent: :destroy
   has_many :lessons, dependent: :destroy
   has_many :results, through: :lessons

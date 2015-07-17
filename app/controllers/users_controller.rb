@@ -10,6 +10,7 @@ class UsersController < ApplicationController
   def create
     @user = User.new user_params
     if @user.save
+      log_in @user
       flash[:success] = t "controllers.users.create.flash_success",
         name: @user.name
       redirect_to @user
@@ -19,7 +20,12 @@ class UsersController < ApplicationController
   end
 
   def show
-    @user = User.find params[:id]
+    if User.exists? params[:id]
+      @user = User.find params[:id]
+    else
+      flash[:danger] = t "controllers.users.show.flash_danger"
+      redirect_to root_path
+    end
   end
 
   private
