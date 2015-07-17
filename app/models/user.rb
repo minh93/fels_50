@@ -7,12 +7,12 @@ class User < ActiveRecord::Base
     foreign_key: "follower_id", dependent: :delete_all
   has_many :followers_relationships, class_name: "Relationship",
     foreign_key: "followed_id", dependent: :delete_all
-  
+
   has_many :following, through: :following_relationships, source: :followed
   has_many :followers, through: :followers_relationships, source: :follower
-  
+
   has_secure_password
-  
+
   validates :email,
     format: {with: /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i},
     presence: true, length: {maximum: Settings.user.maximum_characters},
@@ -21,5 +21,4 @@ class User < ActiveRecord::Base
     length: {minimum: Settings.user.minimum_characters}
   validates :name, presence: true,
     length: {maximum: Settings.user.maximum_characters}
-
 end
