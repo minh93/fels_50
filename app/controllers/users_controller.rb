@@ -1,4 +1,8 @@
 class UsersController < ApplicationController
+  def index
+    @users = User.paginate page: params[:page], per_page: Settings.user.per_page
+  end
+
   def new
     @user = User.new
   end
@@ -8,10 +12,14 @@ class UsersController < ApplicationController
     if @user.save
       flash[:success] = t "controllers.users.create.flash_success",
         name: @user.name
-      redirect_to signup_path
+      redirect_to @user
     else
       render :new
     end
+  end
+
+  def show
+    @user = User.find params[:id]
   end
 
   private
