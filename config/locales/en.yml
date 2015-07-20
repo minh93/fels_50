@@ -42,6 +42,11 @@ en:
       submit: "Follow"
     unfollow:
       submit: "Unfollow"
+  categories:
+    index:
+      title: "All category"
+    category:
+      btn_process: "Take a lesson"
   shared:
     error_messages:
       error_message: "Number of error: "

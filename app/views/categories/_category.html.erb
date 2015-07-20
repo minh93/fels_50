@@ -1,0 +1,16 @@
+<div class="row">
+  <div class="col-md-4">
+    <%= category.name %>
+  </div>
+  <div class="col-md-8">
+    <%= category.description %>
+    <blockquote>
+      <% category.words.each do |word| %>
+        <%= word.content %>
+      <% end %>
+    </blockquote>
+    <button type="button", class="btn btn-default">
+      <%= t ".btn_process" %>
+    </button>
+  </div>
+</div>
