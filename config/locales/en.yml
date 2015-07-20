@@ -52,6 +52,7 @@ en:
       btn_submit: "Log in"
       signup: "Sign up now!"
       new_user?: "New user?"
+      remember_me: "Remember me on this computer"
     sessions:
       create:
         flash_danger: "Invalid email/password combination"
