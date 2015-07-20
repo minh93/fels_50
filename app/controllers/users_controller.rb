@@ -1,4 +1,8 @@
 class UsersController < ApplicationController
+  before_action :logged_in_user, only: [:edit, :update]
+  before_action :load_user, only: [:edit, :update, :show]
+  before_action :correct_user, only: [:edit, :update]
+
   def index
     @users = User.paginate page: params[:page], per_page: Settings.user.per_page
   end
@@ -20,16 +24,31 @@ class UsersController < ApplicationController
   end
 
   def show
-    if User.exists? params[:id]
-      @user = User.find params[:id]
+    redirect_to root_path if @user.nil?
+  end
+
+  def edit
+  end
+
+  def update
+    if @user.update_attributes user_params
+      flash[:success] = t "controllers.users.update.flash_success"
+      redirect_to @user
     else
-      flash[:danger] = t "controllers.users.show.flash_danger"
-      redirect_to root_path
+      render :edit
     end
   end
 
   private
   def user_params
     params.require(:user).permit :name, :email, :password, :password_confirmation
+  end
+
+  def correct_user
+    redirect_to root_url unless current_user? @user
+  end
+
+  def load_user
+    @user = User.find params[:id] if User.exists? params[:id]
   end
 end
