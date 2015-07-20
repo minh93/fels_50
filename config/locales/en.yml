@@ -38,6 +38,10 @@ en:
       confirmation: "Confirmation"
     index:
       h1index: "All users"
+    follow:
+      submit: "Follow"
+    unfollow:
+      submit: "Unfollow"
   shared:
     error_messages:
       error_message: "Number of error: "

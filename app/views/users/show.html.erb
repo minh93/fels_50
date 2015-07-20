@@ -1,9 +1,12 @@
 <div class="row">
   <aside class="col-md-4">
     <section class="user_info">
-      <h1>
+      <aside class="col-md-4">
         <%= render @user %>
-      </h1>
+        <%= render "follow_form" if logged_in? %>
+      </aside>
     </section>
   </aside>
+  <div class="col-md-8">
+  </div>
 </div>
