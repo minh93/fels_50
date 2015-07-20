@@ -1,6 +1,10 @@
 class User < ActiveRecord::Base
   attr_accessor :remember_token
+
+  enum role: [:normal, :admin, :teacher]
+
   before_save ->{self.email = email.downcase}
+  before_create :default_role
 
   has_many :activities, dependent: :destroy
   has_many :lessons, dependent: :destroy
@@ -18,12 +22,12 @@ class User < ActiveRecord::Base
 
   validates :email,
     format: {with: /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i},
-    presence: true, length: {maximum: Settings.user.maximum_characters},
+    presence: true, length: {maximum: 50},
     uniqueness: {case_sensitive: false}
   validates :password, allow_nil: true,
-    length: {minimum: Settings.user.minimum_characters}
+    length: {minimum: 5}
   validates :name, presence: true,
-    length: {maximum: Settings.user.maximum_characters}
+    length: {maximum: 50}
 
   def User.digest string
     cost = if ActiveModel::SecurePassword.min_cost
@@ -62,5 +66,9 @@ class User < ActiveRecord::Base
 
   def following? other_user
     following.include? other_user
+  end
+
+  def default_role
+    self.role = :normal
   end
 end
