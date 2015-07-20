@@ -29,6 +29,13 @@ en:
       email: "Email"
       password: "Password"
       confirmation: "Confirmation"
+    edit:
+      edit: "Update your profile"
+      btn_submit: "Save changes"
+      name: "Name"
+      email: "Email"
+      password: "Password"
+      confirmation: "Confirmation"
     index:
       h1index: "All users"
   shared:
@@ -41,9 +48,13 @@ en:
         flash_success: "Hello %{name}! Welcome to E-Learning system!"
       show:
         flash_danger: "Could not found this user"
+      update:
+        flash_success: "Profile updated!"
     sessions:
       create:
         flash_danger: "Invalid email/password combination"
+    application:
+      logged_in_user: "Please log in"
   sessions:
     new:
       login: "Log in"
