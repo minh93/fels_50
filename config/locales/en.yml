@@ -63,6 +63,7 @@ en:
     sessions:
       create:
         flash_danger: "Invalid email/password combination"
+        flash_danger_blocked: "Your account has been blocked at %{time}"
     application:
       logged_in_user: "Please log in."
       verify_admin: "You are not administrator."
@@ -83,5 +84,11 @@ en:
       user:
         btn_delete: "Delete"
         confirm: "Are you sure?"
+        btn_block: "Block"
+        btn_unblock: "Unblock"
       index:
         h1index: "All users"
+      show:
+        confirm: "Are you sure?"
+        btn_block: "Block"
+        btn_unblock: "Unblock"
