@@ -1,10 +1,10 @@
 class UsersController < ApplicationController
-  before_action :logged_in_user, only: [:edit, :update]
-  before_action :load_user, only: [:edit, :update, :show]
+  before_action :logged_in_user, only: [:edit, :update, :destroy]
+  before_action :load_user, only: [:show, :edit, :update]
   before_action :correct_user, only: [:edit, :update]
 
   def index
-    @users = User.paginate page: params[:page], per_page: Settings.user.per_page
+    @users = User.paginate page: params[:page], per_page: 10
   end
 
   def new

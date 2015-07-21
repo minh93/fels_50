@@ -1,11 +1,4 @@
 user:
-  maximum_characters: 50
-  minimum_characters: 5
-  per_page: 10
   gavatar_url: "https://secure.gravatar.com/avatar/"
-activity:
-  per_page: 20
 session:
   number: "1"
-category:
-  per_page: 10

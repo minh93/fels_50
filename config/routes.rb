@@ -7,4 +7,8 @@ Rails.application.routes.draw do
   resources :users
   resources :relationships, only: [:create, :destroy]
   resources :categories, only: [:index]
+  namespace :admin do
+    root "users#index"
+    resources :users, only: [:index, :destroy]
+  end
 end

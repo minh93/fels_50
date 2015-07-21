@@ -55,15 +55,17 @@ en:
     users:
       create:
         flash_success: "Hello %{name}! Welcome to E-Learning system!"
-      show:
-        flash_danger: "Could not found this user"
       update:
         flash_success: "Profile updated!"
+      destroy:
+        flash_success: "User deleted!"
+        flash_danger: "Cannot delete this user!"
     sessions:
       create:
         flash_danger: "Invalid email/password combination"
     application:
-      logged_in_user: "Please log in"
+      logged_in_user: "Please log in."
+      verify_admin: "You are not administrator."
   sessions:
     new:
       login: "Log in"
@@ -76,3 +78,10 @@ en:
     sessions:
       create:
         flash_danger: "Invalid email/password combination"
+  admin:
+    users:
+      user:
+        btn_delete: "Delete"
+        confirm: "Are you sure?"
+      index:
+        h1index: "All users"
