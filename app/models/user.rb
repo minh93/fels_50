@@ -71,4 +71,16 @@ class User < ActiveRecord::Base
   def default_role
     self.role = :normal
   end
+
+  def block
+    update_attributes blocked_at: Time.now
+  end
+
+  def unblock
+    update_attributes blocked_at: nil
+  end
+
+  def blocked?
+    !self.blocked_at.nil?
+  end
 end
