@@ -9,8 +9,6 @@
         <%= word.content %>
       <% end %>
     </blockquote>
-    <button type="button", class="btn btn-default">
-      <%= t ".btn_process" %>
-    </button>
+    <%= render "lessons/lesson_form", category: category %>
   </div>
 </div>

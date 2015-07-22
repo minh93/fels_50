@@ -67,6 +67,10 @@ en:
     application:
       logged_in_user: "Please log in."
       verify_admin: "You are not administrator."
+      logged_in_user: "Please log in"
+    lessons:
+      create:
+        flash_danger: "Error when create a lesson"
   sessions:
     new:
       login: "Log in"
@@ -92,3 +96,10 @@ en:
         confirm: "Are you sure?"
         btn_block: "Block"
         btn_unblock: "Unblock"
+  lessons:
+    lesson:
+      all_lesson: "Show lesson"
+      take_lesson: "Take"
+      question_done: "/Total"
+    lesson_form:
+      btn_take: "Take"

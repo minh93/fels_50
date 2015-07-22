@@ -1,0 +1,5 @@
+<% if logged_in? %>
+  <%= form_for [category, category.lessons.build] do |f| %>        
+    <%= f.submit t(".btn_take"), class: "btn btn-primary col-md-2" %>
+  <% end %>
+<% end %>

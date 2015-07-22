@@ -1,0 +1,22 @@
+<h3 class="row">
+  <%= t ".all_lesson" %>
+</h3>
+<div id="lesson-container", class="row">
+  <div class="col-md-2">
+    <%= @lesson.category.name %>
+  </div>
+  <div class="col-md-6">    
+    <div class="col-md-2">
+      <%= @lesson.results.answered.count %>
+      <%= t ".question_done" %>
+    </div>
+    <div class="col-md-4">
+      <%= @lesson.created_at.to_formatted_s :short %>
+    </div>
+  </div>
+  <div class="col-md-4">
+    <button class="btn btn-default">
+      <%= t ".take_lesson" %>
+    </button>
+  </div>
+</div>
