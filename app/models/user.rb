@@ -83,4 +83,8 @@ class User < ActiveRecord::Base
   def blocked?
     !self.blocked_at.nil?
   end
+
+  def update_role new_role
+    update_attributes role: new_role
+  end
 end

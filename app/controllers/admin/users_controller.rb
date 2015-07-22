@@ -8,8 +8,19 @@ class Admin::UsersController < Admin::BaseController
   end
 
   def update
-    @user.blocked? ? @user.unblock : @user.block
-    redirect_to admin_users_url
+    if params[:admin_action] == "block"
+      @user.blocked? ? @user.unblock : @user.block
+      redirect_to admin_users_url
+    elsif params[:admin_action] == "edit_role"
+      @user = User.find params[:user_id]
+      if @user.update_role params[:new_role]
+        render json: {message: t("controllers.admin.users.success_edit_role")},
+          status: :ok
+      else
+        render json: {message: t("controllers.admin.users.failed_edit_role")},
+          status: :internal_server_error
+      end
+    end
   end
 
   def show

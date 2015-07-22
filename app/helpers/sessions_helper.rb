@@ -49,4 +49,8 @@ module SessionsHelper
     cookies.delete :user_id
     cookies.delete :remember_token
   end
+
+  def name_of_role value
+    t "helpers.sessions.name_of_role.#{value}"
+  end
 end
