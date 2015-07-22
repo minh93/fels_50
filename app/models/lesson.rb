@@ -9,5 +9,9 @@ class Lesson < ActiveRecord::Base
   before_create lambda {
     words = self.category.words.order("RANDOM()").limit 20
     self.words = words
-  } 
+  }
+
+  def finished?
+    self.results.unanswered.count == 0
+  end
 end

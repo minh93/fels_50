@@ -4,4 +4,6 @@ class Result < ActiveRecord::Base
   belongs_to :answer
 
   scope :answered, ->{where.not answer_id: nil}
+  scope :unanswered, ->{where answer_id: nil}
+  scope :correct_answer, ->{joins(:answer).where answers: {is_correct: true}}
 end
