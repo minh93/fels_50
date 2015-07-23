@@ -106,18 +106,26 @@ en:
         confirm: "Are you sure?"
         btn_reset: "Reset password"
   lessons:
-    lesson:      
+    lesson:
       take_lesson: "Take"
       question_done: "/Total"
       slash: "in total"
+    index:
+      all_lesson: "All lessons"
+      lesson_category_name: "Category"
+      lesson_results_answered: "Answered"
+      lesson_create_time: "Created at"
+      lesson_mark: "Score"
     lesson_form:
       btn_take: "Take"
     show:
       all_lesson: "Show lesson"
       user_role: "This user's role"
       btn_save: "Save"
+      false_result: "False"
     edit:
       submit: "Summit"
+      submit_confirm: "Submit your answer ?"
   helpers:
     sessions:
       name_of_role:

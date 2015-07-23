@@ -14,6 +14,6 @@ class Lesson < ActiveRecord::Base
   }
 
   def finished?
-    self.results.unanswered.count == 0
+    !self.mark.nil?
   end
 end
