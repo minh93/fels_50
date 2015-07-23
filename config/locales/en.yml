@@ -57,7 +57,6 @@ en:
         flash_success: "Hello %{name}! Welcome to E-Learning system!"
       update:
         flash_success: "Profile updated!"
-        flash_success_edit_role: "This user's role has been updated!"
       destroy:
         flash_success: "User deleted!"
         flash_danger: "Cannot delete this user!"
@@ -76,6 +75,8 @@ en:
       users:
         success_edit_role: "Update role success!"
         failed_edit_role: "Cannot update this user's role!"
+        success_reset_password: "Password has successfull reset!"
+        failed_reset_password: "Cannot reset this user's password."
   sessions:
     new:
       login: "Log in"
@@ -102,6 +103,8 @@ en:
         btn_block: "Block"
         btn_unblock: "Unblock"
         btn_save: "Save"
+        confirm: "Are you sure?"
+        btn_reset: "Reset password"
   lessons:
     lesson:      
       take_lesson: "Take"

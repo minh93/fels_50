@@ -7,11 +7,14 @@
       </aside>
     </section>
   </aside>
-  <aside class="col-md-8">
+  <aside class="col-md-4">
     <h4><%= t ".user_role" %></h4>
     <%= select(:user, :role,
-      Settings.user.role.collect{|f| [name_of_role(f), f]})%>
+      Settings.user.role.collect{|f| [name_of_role(f), f]}) %>
     <%= hidden_field_tag "user_id", @user.id %>
     <%= button_to t(".btn_save"), "#", id: "btn-saves", disabled: true %>
+  </aside>
+  <aside class="col-md-4">
+    <%= button_to t(".btn_reset"), "#", id: "btn-reset" %>
   </aside>
 </div>

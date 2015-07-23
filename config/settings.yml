@@ -1,5 +1,6 @@
 user:
   gavatar_url: "https://secure.gravatar.com/avatar/"
+  default_password: "123456789"
   role:
     - normal
     - admin
