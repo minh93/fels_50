@@ -1,4 +1,8 @@
 user:
   gavatar_url: "https://secure.gravatar.com/avatar/"
+  role:
+    - normal
+    - admin
+    - teacher
 session:
   number: "1"

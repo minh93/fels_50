@@ -9,7 +9,7 @@ Rails.application.routes.draw do
   resources :categories, only: [:index]
   namespace :admin do
     root "users#index"
-    resources :users, except: [:new, :create, :edit]
+    resources :users, except: [:new, :create]
   end
   resources :lessons, only: [:index, :create, :show]
   resources :categories do
