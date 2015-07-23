@@ -1,6 +1,6 @@
 class LessonsController < ApplicationController
   before_action :logged_in_user
-  before_action :current_lesson, only: [:show]
+  before_action :current_lesson, except: [:index]
   before_action :correct_user, except: [:index]
 
   def index
@@ -19,7 +19,18 @@ class LessonsController < ApplicationController
     end
   end
 
-  def show    
+  def show
+  end
+
+  def edit
+  end
+
+  def update
+    if @lesson.update_attributes lesson_params
+      redirect_to @lesson
+    else
+      render :edit
+    end
   end
 
   private
@@ -31,5 +42,9 @@ class LessonsController < ApplicationController
     unless current_user == @lesson.user
       redirect_to root_path
     end
+  end
+  
+  def lesson_params
+    params.require(:lesson).permit results_attributes: [:id, :answer_id]
   end
 end
