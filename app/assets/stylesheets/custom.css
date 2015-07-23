@@ -6,8 +6,9 @@
   text-decoration: none;
 }
 
-.body-content{
+#body-content{
   margin-top: 80px;
+  min-height: 510px;
 }
 
 #user-menu{
@@ -50,4 +51,53 @@ ul li {
 ul li .time-ago {
   font-size: 80%;
   font-style: oblique;
+}
+
+#btn-signup{
+  position: relative;
+  top: 10px;
+  left: 200px;
+}
+
+.pagination {
+  font-size: 12px;
+}
+
+.pagination > * {
+  margin-right: 0.1em;
+  padding: 0.3em 0.4em;
+}
+
+.pagination a:hover {
+  background: #428BCA none repeat scroll 0 0;
+  text-shadow: 1px 1px 1px #171717;
+}
+
+.pagination a:active {
+  text-shadow: none;
+}
+
+.pagination .current {
+  background: #428BCA none repeat scroll 0 0;
+  color: white;
+  text-shadow: 1px 1px 1px #171717;
+}
+
+.pagination .disabled {
+  color: #C0C0C0;
+}
+
+#error_explanation {
+  color: red;
+  ul {
+    color: red;
+    margin: 0 0 30px 0;
+  }
+}
+
+.field_with_errors {
+  @extend .has-error;
+  .form-control {
+    color: $state-danger-text;
+  }
 }
