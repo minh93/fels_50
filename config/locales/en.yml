@@ -97,9 +97,11 @@ en:
         btn_block: "Block"
         btn_unblock: "Unblock"
   lessons:
-    lesson:
-      all_lesson: "Show lesson"
+    lesson:      
       take_lesson: "Take"
       question_done: "/Total"
+      slash: "in total"
     lesson_form:
       btn_take: "Take"
+    show:
+      all_lesson: "Show lesson"
