@@ -46,7 +46,7 @@ en:
     index:
       title: "All category"
     category:
-      btn_process: "Take a lesson"
+      btn_take: "Take a lesson"
   shared:
     error_messages:
       error_message: "Number of error: "
@@ -113,6 +113,8 @@ en:
       all_lesson: "Show lesson"
       user_role: "This user's role"
       btn_save: "Save"
+    edit:
+      submit: "Summit"
   helpers:
     sessions:
       name_of_role:
