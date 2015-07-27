@@ -87,4 +87,8 @@ class User < ActiveRecord::Base
   def update_role new_role
     update_attributes role: new_role
   end
+
+  def reset_password
+    update_attributes password_digest: User.digest(Settings.user.default_password)
+  end
 end
