@@ -11,6 +11,7 @@ en:
       sign_up: "Sign up"
       profile: "Profile"
       account: "Account"
+      import_file_csv: "Import file"
     footer:
       website: "Framgia eLearning"
       home: "Home"
@@ -105,6 +106,16 @@ en:
         btn_save: "Save"
         confirm: "Are you sure?"
         btn_reset: "Reset password"
+    words:
+      index:
+        btn_submit: "Import data from CSV file"
+        flash_success: "Successfull import data from CSV file"
+        flash_danger: "Cannot read data!"
+        file_structure: "Structure of file:"
+        title: "Import a CSV File"
+        guide1: "- Line 1: category_name,word_content,true_answer,other_answers"
+        guide2: "- In other_answers, each word separated by a /"
+        guide3: "Example: animal,dog,chó,mèo/gà/vịt"
   lessons:
     lesson:
       take_lesson: "Take"
