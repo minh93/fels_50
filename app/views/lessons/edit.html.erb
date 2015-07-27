@@ -6,7 +6,7 @@
         <%= builder.object.word.content %>
       </div>
       <div class="col-md-8 container-fluid">
-        <% builder.object.word.answers.each do |answer| %>
+        <% builder.object.word.answers.suffer.each do |answer| %>
           <div class="row">
             <%= builder.radio_button :answer_id, answer.id %>
             <%= answer.content %>
@@ -14,10 +14,10 @@
           <hr>
         <% end %>
       </div>
-      <hr/>
+      <hr>
     </div>
   <% end %>
   <div class="row">
-    <%= f.submit t(".submit"), class: "col-md-2 btn btn-primary" %>
+    <%= f.submit t(".submit"), class: "col-md-2 btn btn-primary", id: "submit_test" %>
   </div>
 <% end %>

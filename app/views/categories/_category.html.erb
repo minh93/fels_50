@@ -9,11 +9,8 @@
         <%= word.content %>
       <% end %>
     </blockquote>
-    <%= render "lessons/lesson_form", category: category %>
-    <% if logged_in? %>
-      <%= form_for [category, category.lessons.build] do |f| %>
-        <%= f.submit t(".btn_take"), class: "btn btn-primary col-md-2" %>
-      <% end %>
+    <%= form_for [category, category.lessons.build] do |f| %>
+      <%= f.submit t(".btn_take"), class: "btn btn-primary col-md-2" %>
     <% end %>
   </div>
 </div>

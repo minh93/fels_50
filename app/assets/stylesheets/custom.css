@@ -101,3 +101,22 @@ ul li .time-ago {
     color: $state-danger-text;
   }
 }
+
+.table-title{
+  background-color: #fafafa;
+  min-height: 30px;
+  font-size: 120%;
+  margin-bottom: 30px;
+}
+
+.answer-fail{
+  background-color: #ffe6e6;
+  padding: 10px;
+}
+.answer-true{
+  background-color: #ccffcc;
+  padding: 10px; 
+}
+.question{
+  font-size: 110%; 
+}
