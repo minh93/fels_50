@@ -143,3 +143,8 @@ en:
         normal: "Normal"
         admin: "Administrator"
         teacher: "Teacher"
+  words:
+    index:
+      btn_filter: "Apply"
+      not_learn: "Not learn"
+      learned: "Learned"

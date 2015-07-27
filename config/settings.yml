@@ -7,3 +7,7 @@ user:
     - teacher
 session:
   number: "1"
+category_type:
+  all_word: "all_word"
+  learned: "learned"
+  not_learn: "not_learn"
