@@ -39,10 +39,14 @@ en:
       confirmation: "Confirmation"
     index:
       h1index: "All users"
+      no_result: "Not found result with %{result}"
     follow:
       submit: "Follow"
     unfollow:
       submit: "Unfollow"
+    search:
+      placeholder: "Search user"
+      btn_search: "Search"
   categories:
     index:
       title: "All category"
@@ -99,6 +103,7 @@ en:
         btn_unblock: "Unblock"
       index:
         h1index: "All users"
+        no_result: "Not found result with %{result}"
       show:
         confirm: "Are you sure?"
         btn_block: "Block"
@@ -106,6 +111,9 @@ en:
         btn_save: "Save"
         confirm: "Are you sure?"
         btn_reset: "Reset password"
+      search:
+        placeholder: "Search user"
+        btn_search: "Search"
     words:
       index:
         btn_submit: "Import data from CSV file"
