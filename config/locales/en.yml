@@ -125,6 +125,11 @@ en:
         guide2: "- In other_answers, each word separated by a /"
         guide3: "Example: animal,dog,chó,mèo/gà/vịt/"
         btn_export: "Export CSV file"
+      update:
+        flash_success: "Change success full"
+      edit:
+        word: "Word"
+        answers: "Answers"
   lessons:
     lesson:
       take_lesson: "Take"
