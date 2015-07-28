@@ -9,3 +9,6 @@
   <p><%= t ".guide2" %></p>
   <p><%= t ".guide3" %></p>
 </div>
+<div>
+  <%= button_to t(".btn_export"), admin_words_path(format: "csv", check_action: "export") %>
+</div>

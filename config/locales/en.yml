@@ -11,7 +11,7 @@ en:
       sign_up: "Sign up"
       profile: "Profile"
       account: "Account"
-      import_file_csv: "Import file"
+      import/export_file_csv: "Import/Export file"
     footer:
       website: "Framgia eLearning"
       home: "Home"
@@ -111,19 +111,20 @@ en:
         btn_save: "Save"
         confirm: "Are you sure?"
         btn_reset: "Reset password"
-      search:
-        placeholder: "Search user"
-        btn_search: "Search"
     words:
       index:
         btn_submit: "Import data from CSV file"
         flash_success: "Successfull import data from CSV file"
-        flash_danger: "Cannot read data!"
+        flash_danger2: "Cannot read data!"
+        flash_danger1: 
+          - Nothing change. Please check your file again!
+          - Maybe this file was not csv file or this file was successfull imported.
         file_structure: "Structure of file:"
         title: "Import a CSV File"
         guide1: "- Line 1: category_name,word_content,true_answer,other_answers"
         guide2: "- In other_answers, each word separated by a /"
-        guide3: "Example: animal,dog,chó,mèo/gà/vịt"
+        guide3: "Example: animal,dog,chó,mèo/gà/vịt/"
+        btn_export: "Export CSV file"
   lessons:
     lesson:
       take_lesson: "Take"
