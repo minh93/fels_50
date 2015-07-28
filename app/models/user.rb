@@ -28,6 +28,7 @@ class User < ActiveRecord::Base
     length: {minimum: 5}
   validates :name, presence: true,
     length: {maximum: 50}
+  scope :search, ->query{where "name LIKE ? OR email LIKE ?", "%#{query}%", "%#{query}%"}
 
   def User.digest string
     cost = if ActiveModel::SecurePassword.min_cost
