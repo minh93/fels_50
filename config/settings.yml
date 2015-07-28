@@ -11,3 +11,9 @@ category_type:
   all_word: "all_word"
   learned: "learned"
   not_learn: "not_learn"
+word:
+  column_name:
+    - category_name
+    - word_content
+    - true_answer
+    - other_answers
