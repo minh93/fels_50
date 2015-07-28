@@ -4,4 +4,5 @@ class Answer < ActiveRecord::Base
   has_many :results
 
   scope :suffer, ->{order "RANDOM()"}
+  scope :correct, ->{where(is_correct: true).first}
 end

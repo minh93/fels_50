@@ -15,5 +15,6 @@ Rails.application.routes.draw do
   resources :lessons, except: [:new, :create, :destroy]
   resources :categories do
     resources :lessons, only: :create
+    resources :words, only: :index
   end
 end
