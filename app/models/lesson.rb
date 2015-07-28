@@ -1,4 +1,7 @@
 class Lesson < ActiveRecord::Base
+  include ActivityLog
+  after_update :log
+  
   belongs_to :user
   belongs_to :category
 
@@ -15,5 +18,9 @@ class Lesson < ActiveRecord::Base
 
   def finished?
     !self.mark.nil?
+  end
+
+  def log
+    create_log self.user_id, self.id, Settings.activity_type.take_lesson
   end
 end

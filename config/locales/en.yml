@@ -20,7 +20,7 @@ en:
       title: "Fels"
   static_pages:
     home:
-      btn_words: "Words"
+      btn_words: "Category"
       btn_lessons: "Lessons"
   users:
     new:
@@ -52,6 +52,7 @@ en:
       title: "All category"
     category:
       btn_take: "Take a lesson"
+      btn_gotoword: "Words"
   shared:
     error_messages:
       error_message: "Number of error: "
@@ -76,6 +77,7 @@ en:
     lessons:
       create:
         flash_danger: "Error when create a lesson"
+      already_done: "You has finished this lesson"
     admin:
       users:
         success_edit_role: "Update role success!"
