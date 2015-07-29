@@ -1,11 +1,17 @@
-<footer class="footer">
-  <small>
-    <%= link_to t(".website"), "#" %>
-  </small>
-  <nav>
-    <ul>
-      <li><%= link_to t(".home"), "#" %></li>
-      <li><%= link_to t(".help"), "#" %></li>
-    </ul>
-  </nav>
+<footer class="footer container-fluid">
+  <div class="">
+    <span>
+      <%= t ".website" %>
+    </span>
+    <span class="clock">
+      <span id="Date"></span>
+      <ul style="">
+        <li id="hours"></li>
+        <li id="point">:</li>
+        <li id="min"></li>
+        <li id="point">:</li>
+        <li id="sec"></li>
+      </ul>
+    </span>
+  </div>
 </footer>

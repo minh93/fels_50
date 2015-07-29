@@ -29,6 +29,7 @@ class User < ActiveRecord::Base
   validates :name, presence: true,
     length: {maximum: 50}
   scope :search, ->query{where "name LIKE ? OR email LIKE ?", "%#{query}%", "%#{query}%"}
+  scope :all_admin, ->{where "role = 1"}
 
   def User.digest string
     cost = if ActiveModel::SecurePassword.min_cost

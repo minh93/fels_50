@@ -13,7 +13,7 @@ en:
       account: "Account"
       import/export_file_csv: "Import/Export file"
     footer:
-      website: "Framgia eLearning"
+      website: "Developer: Nguyen Huu Manh, Pham Duc Minh"
       home: "Home"
       help: "Help"
     application:
@@ -22,6 +22,8 @@ en:
     home:
       btn_words: "Words"
       btn_lessons: "Lessons"
+    help:
+      h3: "You can contact with administrators:"
   users:
     new:
       signup: "Sign up!"
@@ -72,7 +74,6 @@ en:
     application:
       logged_in_user: "Please log in."
       verify_admin: "You are not administrator."
-      logged_in_user: "Please log in"
     lessons:
       create:
         flash_danger: "Error when create a lesson"
