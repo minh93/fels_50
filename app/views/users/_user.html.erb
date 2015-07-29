@@ -1,5 +1,2 @@
-<li>
-  <%= gravatar_for user %>
-  <%= link_to user.name, user %>
-  <%= user.email %>
-</li>
+<%= link_to gravatar_for(user), user %>
+<h3><%= current_user.name %></h3>
