@@ -120,3 +120,60 @@ ul li .time-ago {
 .question{
   font-size: 110%; 
 }
+#Date {
+  font-family: "BebasNeueRegular", Arial, Helvetica, sans-serif;
+  text-align: center;
+  color: #003366;
+}
+
+.clock ul {
+  list-style: none;
+  color: #003366;
+}
+
+.clock ul li {
+  display: inline;
+  font-family: "BebasNeueRegular", Arial, Helvetica, sans-serif;
+}
+
+#point {
+  position: relative;
+  -moz-animation: mymove 1s ease infinite;
+  -webkit-animation: mymove 1s ease infinite;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+@-webkit-keyframes mymove {
+  0% {
+    opacity: 1.0;
+  }
+
+  50% {
+    opacity: 0;
+    text-shadow: none;
+  }
+
+  100% {
+    opacity: 1.0;
+  } 
+}
+
+@-moz-keyframes mymove {
+  0% {
+    opacity: 1.0;
+  }
+
+  50% {
+    opacity: 0;
+    text-shadow: none;
+  }
+
+  100% {
+    opacity: 1.0;
+  };
+}
+.clock{
+  position: relative;
+  left: 45%;
+}
