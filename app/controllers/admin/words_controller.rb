@@ -2,6 +2,7 @@ class Admin::WordsController < Admin::BaseController
   require "csv"
   require "rails/all"
   before_action :verify_admin
+  before_action :current_word, only: [:edit, :update]
   
   def index
   end
@@ -15,6 +16,15 @@ class Admin::WordsController < Admin::BaseController
     else
       import params[:file]
     end
+  end
+
+  def edit    
+  end
+
+  def update
+    @word.update_attributes word_params
+    flash[:success] = t "admin.words.update.flash_success"
+    redirect_to [:edit, :admin, @word]
   end
 
   private
@@ -69,9 +79,9 @@ class Admin::WordsController < Admin::BaseController
 
   def check_update count
     if count == 0
-        flash[:danger] = t("admin.words.index.flash_danger1").join(" ")
-      else
-        flash[:success] = t "admin.words.index.flash_success"
+      flash[:danger] = t("admin.words.index.flash_danger1").join(" ")
+    else
+      flash[:success] = t "admin.words.index.flash_success"
     end
   end
 
@@ -87,5 +97,14 @@ class Admin::WordsController < Admin::BaseController
       Answer.create content: ans, word_id: word.id, is_correct: false unless ans.nil?
     end
     count += 1
+  end
+
+  def word_params
+    params.require(:word)
+      .permit :content, answers_attributes: [:id, :content, :is_correct, :_destroy]
+  end
+
+  def current_word
+    @word = Word.find params[:id]
   end
 end

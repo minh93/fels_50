@@ -10,7 +10,7 @@ Rails.application.routes.draw do
   namespace :admin do
     root "users#index"
     resources :users, except: [:new, :create, :edit]
-    resources :words, only: [:create, :index]
+    resources :words, except: [:new, :show, :destroy]
   end
   resources :lessons, except: [:new, :create, :destroy]
   resources :categories do
