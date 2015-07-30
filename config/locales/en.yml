@@ -28,14 +28,12 @@ en:
   users:
     new:
       signup: "Sign up!"
-      btn_submit: "Create my account"
       name: "Name"
       email: "Email"
       password: "Password"
       confirmation: "Confirmation"
     edit:
       edit: "Update your profile"
-      btn_submit: "Save changes"
       name: "Name"
       email: "Email"
       password: "Password"
@@ -50,6 +48,9 @@ en:
     search:
       placeholder: "Search user"
       btn_search: "Search"
+    form:
+      btn_submit_edit: "Save changes"
+      btn_submit_new: "Create my account"
   categories:
     index:
       title: "All category"
