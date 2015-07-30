@@ -1,6 +1,6 @@
 class Lesson < ActiveRecord::Base
   include ActivityLog
-  after_update :log
+  after_update :create_finish_lesson_log
   
   belongs_to :user
   belongs_to :category
@@ -8,6 +8,7 @@ class Lesson < ActiveRecord::Base
   has_many :results, dependent: :destroy
   has_many :words, through: :results
   has_many :answers, through: :results
+  has_many :activities, as: :targetable
 
   accepts_nested_attributes_for :results
 
@@ -20,7 +21,9 @@ class Lesson < ActiveRecord::Base
     !self.mark.nil?
   end
 
-  def log
-    create_log self.user_id, self.id, Settings.activity_type.take_lesson
+  def create_finish_lesson_log
+    unless finished?
+      create_log self, self.user_id, Settings.activity_type.take_lesson
+    end
   end
 end

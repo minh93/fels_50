@@ -167,3 +167,7 @@ en:
       btn_filter: "Apply"
       not_learn: "Not learn"
       learned: "Learned"
+  shared:
+    stats:
+      following: "following"
+      followers: "followers"
