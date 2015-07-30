@@ -1,4 +1,5 @@
 en:
+  wait: "Please wait..."
   layouts: 
     header:
       website: "Framgia eLearning"

@@ -15,8 +15,12 @@
     <hr>
     <div class="row", id="user-word-list">
       <ul class="container-fluid">
-        <%= render @activities %>
-        <%= will_paginate @activities %>
+        <div id="activities">
+          <%= render @activities %>
+        </div>
+        <div id="scroll">
+          <%= will_paginate @activities %>
+        </div>
       </ul>
     </div>
   </div>
