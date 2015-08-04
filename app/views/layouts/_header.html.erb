@@ -5,6 +5,8 @@
     </nav>
     <nav>
       <ul class="nav navbar-nav navbar-right">
+        <%= link_to "English", "/en/" %>
+        <%= link_to "Japanese", "/ja/" %>
         <% if logged_in? %>
           <% if current_user.admin? %>
             <li><%= link_to t(".home"), admin_root_path %></li>
