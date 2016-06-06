@@ -69,6 +69,7 @@ $(document).ready(function() {
 	} 
 });
 
+/*
 var map;
 		var brooklyn = new google.maps.LatLng(40.6743890, -73.9455);
 		
@@ -121,3 +122,4 @@ var map;
 		}
 		
 		google.maps.event.addDomListener(window, 'load', initialize);
+*/
