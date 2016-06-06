@@ -41,7 +41,7 @@
                 <ul>
                   <% if logged_in? %>
                     <% if current_user.admin? %>
-                      <li><%= link_to t(".home"), admin_root_path %></li>
+                      <li><%= link_to t(".home"), root_path %></li>
                       <li><%= link_to t(".help"), help_path %></li>
                       <li><%= link_to t(".import/export_file_csv"), admin_words_path %></li>
                       <li><%= link_to t(".all_users"), admin_users_path %></li>
