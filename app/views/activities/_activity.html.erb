@@ -1,0 +1,10 @@
+<li>
+  <h4><%= link_to activity.user.name, activity.user %></h4><span><%= activity.user.role %></span>
+    <div class="thumb">
+      <%= gravatar_for activity.user, size: 82 %>
+    </div>
+    <div class="text">
+      <p class="date"><%= activity.created_at.to_formatted_s :short %></p>
+        <p><%= activity.type_of_activity %></p>
+    </div>
+</li>

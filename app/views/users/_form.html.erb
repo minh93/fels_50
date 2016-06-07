@@ -1,0 +1,16 @@
+<%= form_for @user do |f| %>
+  <div class="form-body">
+    <%= render "shared/error_messages" %>
+    <fieldset>
+        <%= f.label :name, t(".name") %>
+        <%= f.text_field :name, class: "input-block-level" %>
+        <%= f.label :email, t(".email") %>
+        <%= f.email_field :email, class: "input-block-level" %>
+        <%= f.label :password, t(".password") %>
+        <%= f.password_field :password, class: "input-block-level" %>
+        <%= f.label :password_confirmation, t(".confirmation") %>
+        <%= f.password_field :password_confirmation, class: "input-block-level" %>
+        <%= f.submit t(".btn_submit_#{controller.action_name}"), class: "btn-style", id: "btn-signup" %>
+    </fieldset>
+    </div>
+<% end %>
