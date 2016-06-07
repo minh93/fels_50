@@ -1,0 +1,27 @@
+<% if category_counter % 3 == 0 %>
+<div class="row">
+<% end %>
+    <div class="span4">
+        <div class="course">
+            <div class="text">
+                <div class="header">
+                    <h4><%= category.name %></h4>
+                    <div class="rating">
+                        <span>☆</span><span>☆</span><span>☆</span><span>☆</span><span>☆</span>
+                    </div>
+                </div>
+                <div class="course-name">
+                    <p><%= category.description %></p>
+                </div>
+                <div class="course-detail-btn">
+                    <%= form_for [category, category.lessons.build] do |f| %>
+                        <%= f.submit t(".btn_take"), class: "btn-style" %>
+                    <% end %>
+                    <%= button_to t(".btn_gotoword"), category_words_path(category), method: :get, class: "btn-style" %>
+                </div>
+            </div>
+        </div>
+    </div>
+<% if category_counter % 3 == 2 %>
+</div>
+<% end %>

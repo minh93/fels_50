@@ -1,0 +1,12 @@
+<tr>
+  <td>
+    <% if current_user.admin? %>
+      <%= link_to word.content, edit_admin_word_path(word), class: 'color' %>
+    <% else %>
+    <p class="color">
+      <%= word.content %>
+    </p>
+    <% end %>
+  </td>
+  <td><p><%= word.answers.correct.content %></p></td>
+</tr>

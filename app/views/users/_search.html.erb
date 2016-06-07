@@ -1,0 +1,11 @@
+<% if current_user.admin? %>
+  <%= form_tag admin_users_path, method: :get do %>
+    <%= text_field_tag :search, params[:search], placeholder: t(".placeholder") %>
+    <%= submit_tag t ".btn_search" %>
+  <% end %>
+<% else %>
+  <%= form_tag users_path, method: :get do %>
+    <%= text_field_tag :search, params[:search], placeholder: t(".placeholder") %>
+    <%= submit_tag t ".btn_search" %>
+  <% end %>
+<% end %>
