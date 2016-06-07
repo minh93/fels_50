@@ -15,8 +15,12 @@
   <% end %>
 </div>
 <hr>
-<div class="row", id="word_list">
-  <%= render @words %>
+<div class="event-vanue">
+    <table>
+        <div class="row", id="word_list">
+          <%= render @words %>
+        </div>
+    </table>
 </div>
 <div class="row">
   <%= will_paginate @words %>
