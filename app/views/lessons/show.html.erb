@@ -1,7 +1,28 @@
 <h3 class="row">
   <%= t ".all_lesson" %>
 </h3>
-<%= render @lesson %>
+
+<div class="event-vanue">
+    <table>
+        <div class="row", id="word_list">
+          <tr>
+            <td>
+              <%= t ".lesson_category_name" %>
+            </td>
+            <td>
+              <%= t ".lesson_results_answered" %>
+            </td>
+            <td>
+              <%= t ".lesson_create_time" %>
+            </td>
+            <td>
+              <%= t ".lesson_mark" %>
+            </td>
+          </tr>
+            <%= render @lesson %>
+        </div>
+    </table>
+</div>
 <% if @lesson.finished? %>
   <div class="row">
     <% @lesson.results.each_with_index do |result, index| %>
@@ -11,11 +32,11 @@
       </div>
       <div class= "col-md-8">
         <% if result.correct? %>
-          <div class="answer-true">
+          <div style="background-color: #ccffcc; padding: 10px; ">
             <%= result.answer.content %>
           </div>
         <% else %>
-          <div class="answer-fail">
+          <div style="background-color: #ffe6e6; padding: 10px;">
             <%= t ".false_result" %>
           </div>
         <% end %>
