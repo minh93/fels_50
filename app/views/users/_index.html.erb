@@ -3,11 +3,15 @@
 <div>
   <%= render "users/search" %>
 </div>
-<ul class="users">
-  <% if @users.present? %>
-    <%= render @users %>
-  <% else %>
-    <p><%= t ".no_result", result: params[:search] %>.</p>
-  <% end %>
-</ul>
-<%= will_paginate %>
+<div class="tab-content container">
+  <div class="tab-pane fade active in" id="web">
+    <ul class="course-topics row">
+		  <% if @users.present? %>
+		    <%= render @users %>
+		  <% else %>
+		    <p><%= t ".no_result", result: params[:search] %>.</p>
+		  <% end %>
+    </ul>
+    <%= will_paginate %>
+  </div>
+</div>

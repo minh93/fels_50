@@ -14,7 +14,7 @@ en:
       account: "Account"
       import/export_file_csv: "Import/Export file"
     footer:
-      website: "Lê Thanh Hương - DC00201890. Trường Đại học Tài nguyên và Môi Trường Hà Nội, Khoa CNTT"
+      website: "Lê Thanh Hương - DC00201890"
       home: "Home"
       help: "Help"
     application:
@@ -51,6 +51,7 @@ en:
     form:
       btn_submit_edit: "Save changes"
       btn_submit_new: "Create my account"
+      btn_submit_create: "Create my account"
   categories:
     index:
       title: "All category"

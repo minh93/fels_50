@@ -51,6 +51,7 @@ ja:
     form:
       btn_submit_edit: "変更する。"
       btn_submit_new: "アカウントを登録する。"
+      btn_submit_create: "アカウントを登録する。"
   categories:
     index:
       title: "カテゴリ"
